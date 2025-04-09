@@ -1,0 +1,19 @@
+{
+  "name": "cf-full-stack-react",
+  "compatibility_date": "2024-04-01",
+  "pages_project_name": "cf-full-stack-react",
+  "build": {
+    "command": "npm run build",
+    "upload": {
+      "format": "directory",
+      "dir": "dist"
+    }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "d1-example",
+      "database_id": "a1f1e4d5-dedf-4de2-8299-067fa259cc00"
+    }
+  ]
+}
