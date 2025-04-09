@@ -1,12 +1,5 @@
 {
   "name": "cf-full-stack-react",
   "compatibility_date": "2024-04-01",
-  "pages_build_output_dir": "dist",
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "d1-example",
-      "database_id": "aaaa"
-    }
-  ]
+  "pages_build_output_dir": "dist"
 }
