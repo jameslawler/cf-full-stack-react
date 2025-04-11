@@ -1,14 +1,18 @@
-export function onRequestGet(context) {
-  const { id } = context.params;
+export async function onRequestGet({ env, params }) {
+  const id = Number(params.id);
 
   if (!id) {
     return new Response('Not found', { status: 404});
   }
 
+  const result = await env.DB.prepare("SELECT * FROM posts WHERE id = ?").bind(id).first();
+
+  if (!result) {
+    return new Response('Not found', { status: 404});
+  }
+
   return Response.json({
-    id: 1,
-    title: "My First Post",
-    text: "Hello, this is my first post",
-    published_at: new Date("2025-04-10"),
+    ...result,
+    published_at: new Date(result.published_at),
   });
 };
